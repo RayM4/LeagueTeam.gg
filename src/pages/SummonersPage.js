@@ -1,5 +1,6 @@
 import React from "react";
 import Summoner from "./Summoner";
+import {useParams} from "react-router-dom";
 const axios = require("axios")
 
 // const url = "https://jsonplaceholder.typicode.com/posts"
@@ -11,8 +12,15 @@ const axios = require("axios")
 
 function SummonersPage(){
 
+    // this is the value from the url
+    const { summonerId }  = useParams();
+
+    // printing out the value
+    console.log(summonerId);
+
     return (
-        <Summoner />
+        // Passing value in as a props
+        <Summoner name={summonerId} />
     )
 }
 

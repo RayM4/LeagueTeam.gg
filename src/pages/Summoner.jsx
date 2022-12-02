@@ -1,6 +1,6 @@
 import { Form } from "react-router-dom"
 
-export default function Summoner(){
+export default function Summoner(props){
     const contact = {
         first: "Your",
         last: "Name",
@@ -11,6 +11,8 @@ export default function Summoner(){
     return (
         <>
             <h1>Summoner Page</h1>
+                {/* Using value passed from props */}
+                <h2> Hi {props.name} </h2>
                 <div id="contact">
                     <div>
                         <img 
